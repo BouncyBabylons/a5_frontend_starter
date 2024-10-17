@@ -11,7 +11,7 @@ const userStore = useUserStore();
 const { isLoggedIn } = storeToRefs(userStore);
 const { toast } = storeToRefs(useToastStore());
 
-// Make sure to update the session before mounting the app in case the user is already logged in
+// Make sure to update the session before mounting the app in case the user is already logged in"
 onBeforeMount(async () => {
   try {
     await userStore.updateSession();

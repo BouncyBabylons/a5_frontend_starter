@@ -25,10 +25,13 @@ onBeforeMount(async () => {
   <header>
     <nav>
       <div class="title">
-        <img src="@/assets/images/logo.svg" />
+        <!-- <img src="@/assets/images/logo.svg" /> -->
         <RouterLink :to="{ name: 'Home' }">
-          <h1>Enny</h1>
+          <h1 class="logo">Enny</h1>
         </RouterLink>
+        <div class="tagline">
+          <h3>Your Entertainment Encyclopedia</h3>
+        </div>
       </div>
       <ul>
         <li>
@@ -57,20 +60,39 @@ onBeforeMount(async () => {
 
 nav {
   padding: 1em 2em;
-  background-color: lightgray;
+  background-color: #f3f2f7;
   display: flex;
   align-items: center;
+  border-bottom: 5px solid #19f0c9;
 }
 
 h1 {
+  color: #f0ead6;
   font-size: 2em;
   margin: 0;
+}
+
+h3 {
+  font-size: 1em;
+  vertical-align: text-bottom;
+  text-align: bottom;
+}
+
+.logo {
+  color: #19f0c9;
+  font-family: "Ballet", cursive;
+  font-size: 3em;
 }
 
 .title {
   display: flex;
   align-items: center;
   gap: 0.5em;
+}
+
+.tagline {
+  position: relative;
+  top: 20px;
 }
 
 img {

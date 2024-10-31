@@ -63,9 +63,8 @@ textarea {
   height: 20px;
 }
 
-#content {
-  background-color: pink;
-}
+/* #content {
+} */
 
 p {
   margin: 0em;

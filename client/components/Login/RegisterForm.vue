@@ -36,6 +36,7 @@ async function register() {
 
 <style scoped>
 h3 {
+  color: #f3f2f7;
   display: flex;
   justify-content: center;
 }

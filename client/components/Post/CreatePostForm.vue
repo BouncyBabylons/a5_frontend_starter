@@ -21,19 +21,6 @@ const createPost = async () => {
   emptyForm();
 };
 
-const updateRating = async (starCount: number) => {
-  const ratingStars = document.getElementsByClassName("rating_star");
-  const inactiveStar = "@/assets/images/blank_star.svg";
-  const activeStar = "@/assets/images/filled_star.svg";
-  for (let i = 0; i < ratingStars.length; i++) {
-    if (i < starCount) {
-      ratingStars[i].src = activeStar;
-    } else {
-      ratingStars[i].src = inactiveStar;
-    }
-  }
-};
-
 const emptyForm = () => {
   title.value = "";
   creator.value = "";
@@ -95,7 +82,6 @@ form {
 }
 
 #content {
-  background-color: pink;
 }
 
 textarea {

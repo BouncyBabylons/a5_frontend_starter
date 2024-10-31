@@ -25,7 +25,9 @@ async function updatePassword() {
   <h2>Update user details</h2>
   <form @submit.prevent="updateUsername" class="pure-form">
     <fieldset>
-      <legend>Change your username</legend>
+      <legend>
+        <h3>Change your username</h3>
+      </legend>
       <input type="text" placeholder="New username" v-model="username" required />
       <button type="submit" class="pure-button pure-button-primary">Update username</button>
     </fieldset>
@@ -33,7 +35,9 @@ async function updatePassword() {
 
   <form @submit.prevent="updatePassword" class="pure-form">
     <fieldset>
-      <legend>Change your password</legend>
+      <legend>
+        <h3>Change your password</h3>
+      </legend>
       <input type="password" placeholder="Old password" v-model="currentPassword" required />
       <input type="password" placeholder="New password" v-model="newPassword" required />
       <button type="submit" class="pure-button pure-button-primary">Update password</button>

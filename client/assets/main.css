@@ -5,20 +5,45 @@
   --base-bg: #f1f3f5;
 }
 
+body {
+  color: #170312;
+  font-family: "Quicksand", "Arial", sans-serif;
+  background-color: #455757;
+}
+
+h1 {
+  color: #f3f2f7;
+  text-shadow: 2px 2px #170312;
+}
+
+h2 {
+  color: #f3f2f7;
+}
+
+legend {
+  color: #f3f2f7;
+}
+
 button.btn-small {
   font-size: 80%;
 }
 
 button.button-error {
-  color: white;
-  background: var(--red);
+  color: #170312;
+  background-color: #ed6a5a;
+  /* background: var(--red); */
 }
 
-a.button {
+button.pure-button-primary {
+  color: #455757;
+  background-color: #19f0c9;
+}
+
+.button {
   color: #212529;
   background-color: #f1f3f5;
-  border: 1px solid #dee2e6;
-  border-radius: 0.25em;
+  border: 1px solid pink;
+  border-radius: 3.75em;
   padding: 0.375em 0.75em;
   text-decoration: none;
 }

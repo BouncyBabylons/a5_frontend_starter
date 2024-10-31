@@ -25,9 +25,10 @@ export default class CommentingConcept {
     return { msg: "Comment successfully created!", comment: await this.comments.readOne({ _id }) };
   }
 
-  async getCommentsForUser(user: ObjectId) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async getCommentsForUser(_author: ObjectId) {
     // Returns all comments
-    return await this.comments.readMany({}, { sort: { user: -1 } });
+    return await this.comments.readMany({}, { sort: { _author: -1 } });
   }
 
   // async getCommentsOnPost() {

@@ -84,10 +84,14 @@ class Routes {
   }
 
   @Router.post("/posts")
-  async createPost(session: SessionDoc, title: string, creator: string, rating: number, content: string, options?: PostOptions) {
+  async createPost(session: SessionDoc, title: string, creator: string, rating: number, content: string, recommendation?: string, options?: PostOptions) {
     const user = Sessioning.getUser(session);
-    await Posting.assertValidRating(rating);
+    console.log("hello");
+    console.log("hi", creator, content, rating);
     const created = await Posting.create(user, title, creator, rating, content, options);
+    // if (recommendation) {
+    //   assert Friending.assertUserIsFriend(user, )
+    // }
     return { msg: created.msg, post: await Responses.post(created.post) };
   }
 
@@ -188,6 +192,7 @@ class Routes {
   async deleteRecommendation(session: SessionDoc, id: string) {
     const user = Sessioning.getUser(session);
     const oid = new ObjectId(id);
+    await Recommending.assertRecommenderIsUser(oid, user);
     return Recommending.delete(oid);
   }
 

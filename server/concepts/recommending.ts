@@ -40,7 +40,7 @@ export default class RecommendingConcept {
     return { msg: "Recommendation deleted successfully!" };
   }
 
-  async assertAuthorIsUser(_id: ObjectId, user: ObjectId) {
+  async assertRecommenderIsUser(_id: ObjectId, user: ObjectId) {
     const recommendation = await this.recommendations.readOne({ _id });
     if (!recommendation) {
       throw new NotFoundError("Recommendation ${_id} does not exist!");

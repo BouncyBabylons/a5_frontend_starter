@@ -75,10 +75,10 @@ export default class PostingConcept {
     }
   }
 
-  async assertValidRating(rating: number) {
-    // const post = await this.posts.readOne({ _id });
-    console.log(rating);
-  }
+  // async assertValidRating(rating: number) {
+  //   // const post = await this.posts.readOne({ _id });
+  //   console.log(rating);
+  // }
 }
 
 export class PostAuthorNotMatchError extends NotAllowedError {

@@ -3,6 +3,7 @@ import { useUserStore } from "@/stores/user";
 import { formatDate } from "@/utils/formatDate";
 import { storeToRefs } from "pinia";
 import { fetchy } from "../../utils/fetchy";
+// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const props = defineProps(["post"]);
 const emit = defineEmits(["editPost", "refreshPosts"]);
@@ -16,10 +17,19 @@ const deletePost = async () => {
   }
   emit("refreshPosts");
 };
+
+// const navigateToProfile = async () => {
+//   const user = props.post.author;
+//   try {
+//     await router.push({ path: "profile/".concat(user) });
+//   } catch {
+//     return;
+//   }
+// };
 </script>
 
 <template>
-  <p class="author">{{ props.post.author }}</p>
+  <p class="author" @click="navigateToProfile">{{ props.post.author }}</p>
   <p>{{ props.post.content }}</p>
   <div class="base">
     <menu v-if="props.post.author == currentUsername">

@@ -1,12 +1,12 @@
-<!-- <script setup lang="ts">
-import { useUserStore } from "@/stores/user";
-import { storeToRefs } from "pinia";
+<script setup lang="ts">
+// <!-- import { useUserStore } from "@/stores/user";
+// import { storeToRefs } from "pinia";
 
-const rating = 0;
-const maxRating = 10;
-const props = defineProps(["post"]);
-const emit = defineEmits(["editPost", "refreshPosts"]);
-const { currentUsername } = storeToRefs(useUserStore());
+// const rating = 0;
+// const maxRating = 10;
+// const props = defineProps(["post"]);
+// const emit = defineEmits(["editPost", "refreshPosts"]);
+// const { currentUsername } = storeToRefs(useUserStore());
 
 // const updateRating = async (starCount: number) => {
 //   const currentStars = document.getElementsByClassName("rating_star");
@@ -40,7 +40,7 @@ const { currentUsername } = storeToRefs(useUserStore());
   <svg width="300" height="200">
     <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill: lime; stroke: purple; stroke-width: 5; fill-rule: evenodd" />
   </svg>
-  <div class="base">
+  <!-- <div class="base">
     <div class="rating">
       <img class="rating_star" @click="updateRating(1)" src="@/assets/images/blank_star.svg" />
       <img class="rating_star" @click="updateRating(2)" src="@/assets/images/blank_star.svg" />
@@ -52,7 +52,8 @@ const { currentUsername } = storeToRefs(useUserStore());
       <img class="rating_star" @click="updateRating(8)" src="@/assets/images/blank_star.svg" />
       <img class="rating_star" @click="updateRating(9)" src="@/assets/images/blank_star.svg" />
     </div>
-  </div>
+  </div> -->
+  -->
 </template>
 
 <style scoped>
@@ -92,4 +93,5 @@ menu {
 .base article:only-child {
   margin-left: auto;
 }
-</style> -->
+</style>
+-->

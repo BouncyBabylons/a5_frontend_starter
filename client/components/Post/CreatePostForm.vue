@@ -38,6 +38,17 @@ const emptyForm = () => {
     <label for="rating">Rating:</label>
     <input type="number" id="rating" v-model="rating" placeholder="Give it a rating!" required />
     <div class="rating">
+      <img class="rating_star" src="@/assets/images/blank_star.svg" />
+      <img class="rating_star" src="@/assets/images/blank_star.svg" />
+      <img class="rating_star" src="@/assets/images/blank_star.svg" />
+      <img class="rating_star" src="@/assets/images/blank_star.svg" />
+      <img class="rating_star" src="@/assets/images/blank_star.svg" />
+      <img class="rating_star" src="@/assets/images/blank_star.svg" />
+      <img class="rating_star" src="@/assets/images/blank_star.svg" />
+      <img class="rating_star" src="@/assets/images/blank_star.svg" />
+      <img class="rating_star" src="@/assets/images/blank_star.svg" />
+      <img class="rating_star" src="@/assets/images/blank_star.svg" />
+      <!-- 
       <img class="rating_star" @click="updateRating(1)" src="@/assets/images/blank_star.svg" />
       <img class="rating_star" @click="updateRating(2)" src="@/assets/images/blank_star.svg" />
       <img class="rating_star" @click="updateRating(3)" src="@/assets/images/blank_star.svg" />
@@ -47,8 +58,9 @@ const emptyForm = () => {
       <img class="rating_star" @click="updateRating(7)" src="@/assets/images/blank_star.svg" />
       <img class="rating_star" @click="updateRating(8)" src="@/assets/images/blank_star.svg" />
       <img class="rating_star" @click="updateRating(9)" src="@/assets/images/blank_star.svg" />
-      <img class="rating_star" @click="updateRating(10)" src="@/assets/images/blank_star.svg" />
+      <img class="rating_star" @click="updateRating(10)" src="@/assets/images/blank_star.svg" /> -->
     </div>
+    <p>imagine how cool reactive star ratings would be *mindblow gif*</p>
     <label for="content">Review:</label>
     <textarea id="content" v-model="content" placeholder="What was cool? What wasn't cool?" required> </textarea>
     <label for="recommendation">Recommendation:</label>

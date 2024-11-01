@@ -3,6 +3,8 @@ import { useUserStore } from "@/stores/user";
 import { formatDate } from "@/utils/formatDate";
 import { storeToRefs } from "pinia";
 import { fetchy } from "../../utils/fetchy";
+import router from "@/router";
+
 // import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const props = defineProps(["post"]);

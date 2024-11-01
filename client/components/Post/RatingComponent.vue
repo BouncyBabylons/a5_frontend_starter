@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useUserStore } from "@/stores/user";
 import { storeToRefs } from "pinia";
-import { fetchy } from "../../utils/fetchy";
 
 const rating = 0;
 const maxRating = 10;
@@ -9,32 +8,32 @@ const props = defineProps(["post"]);
 const emit = defineEmits(["editPost", "refreshPosts"]);
 const { currentUsername } = storeToRefs(useUserStore());
 
-const updateRating = async (starCount: number) => {
-  const currentStars = document.getElementsByClassName("rating_star");
-  const ratingArray = document.getElementsByClassName("rating");
-  const newStars = [];
-  const blankStar = document.createElement("img");
-  blankStar.setAttribute("src", "@/assets/images/blank_star.svg");
-  ratingArray.appendChild(blankStar);
-  console.log(starCount);
+// const updateRating = async (starCount: number) => {
+//   const currentStars = document.getElementsByClassName("rating_star");
+//   const ratingArray = document.getElementsByClassName("rating");
+//   const newStars = [];
+//   const blankStar = document.createElement("img");
+//   blankStar.setAttribute("src", "@/assets/images/blank_star.svg");
+//   // ratingArray.appendChild(blankStar);
+//   console.log(starCount);
 
-  for (let i = 0; i < maxRating; i++) {
-    if (i < starCount) {
-      // newStars.push(<img class="rating_star" @click="updateRating(1)" src="@/assets/images/blank_star.svg" />);
-    } else {
-      newStars.push();
-    }
-  }
-  try {
-    await fetchy(`/api/posts/${props.post._id}`, "PATCH", {
-      body: { rating: rating.value },
-    });
-  } catch {
-    return;
-  }
-  emit("refreshPosts");
-  emit("editPost");
-};
+//   for (let i = 0; i < maxRating; i++) {
+//     if (i < starCount) {
+//       // newStars.push(<img class="rating_star" @click="updateRating(1)" src="@/assets/images/blank_star.svg" />);
+//     } else {
+//       newStars.push();
+//     }
+//   }
+//   try {
+//     await fetchy(`/api/posts/${props.post._id}`, "PATCH", {
+//       body: { rating: rating.value },
+//     });
+//   } catch {
+//     return;
+//   }
+//   emit("refreshPosts");
+//   emit("editPost");
+// };
 </script>
 
 <template>

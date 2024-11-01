@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { fetchy } from "@/utils/fetchy";
 
 const props = defineProps(["post"]);
 const target = ref(props.post._id);
-const content = ref(props.post.content);
-const emit = defineEmits(["editPost", "refreshPosts", "addComment"]);
+const content = ref("");
+const emit = defineEmits(["addComment"]);
 
 const addComment = async (target: string, content: string) => {
   try {

@@ -38,7 +38,7 @@ const navigateToProfile = async () => {
       <li><button class="button-error btn-small pure-button" @click="deletePost">Delete</button></li>
     </menu>
     <menu v-else-if="isLoggedIn && props.post.author !== currentUsername">
-      <li><button class="btn-small pure-button comment" @click="emit('addComment', props.post._id)">Comment</button></li>
+      <li><button class="btn-small pure-button" @click="emit('addComment', props.post._id)">Comment</button></li>
     </menu>
     <article class="timestamp">
       <p v-if="props.post.dateCreated !== props.post.dateUpdated">Edited on: {{ formatDate(props.post.dateUpdated) }}</p>
